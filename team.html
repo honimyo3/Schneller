@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Brand - Team</title>
+  <link rel="icon" href="file:///C:/Users/valer/Downloads/download__2_-removebg-preview.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    /* General styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #FFF;
+      background-color: #121212;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Layout and branding */
+    header {
+      background-color: #111;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* Team section */
+    .team-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 4rem 1rem;
+    }
+
+    .team-member {
+      max-width: 300px;
+      text-align: center;
+      margin: 1rem;
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .team-member h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 1rem 0;
+      color: #FFF;
+    }
+
+    .team-member p {
+      font-size: 1rem;
+      color: #FFF;
+    }
+
+    /* Footer */
+    /* Footer */
+    footer {
+      background-color: #111;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+
+    /* Responsive design */
+    @media screen and (max-width: 768px) {
+      .team-member img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .team-member h3 {
+        font-size: 1.3rem;
+      }
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand-icon {
+      width: 32px;
+      /* Adjust the width of the icon */
+      height: 32px;
+      /* Adjust the height of the icon */
+      margin-right: 10px;
+      /* Add some space between the icon and the h1 text */
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="animate" style="--delay: 0.5s">
+    <div class="brand">
+      <img src="file:///C:/Users/valer/Downloads/download__2_-removebg-preview.png" alt="Icon" class="brand-icon">
+      <h1>Schneller</h1>
+    </div>
+    <nav>
+      <a href="site.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <section class="team-section animate" style="--delay: 1s">
+    <div class="team-member">
+      <div class="team-member-image">
+        <img src="thing.png" alt="Jaylen#0320" />
+      </div>
+      <h3>Jaylen#0320</h3>
+      <p>Founder</p>
+      <div class="team-member-icons">
+        <a href="https://twitter.com/me_merk30838" class="icon-link"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="animate" style="--delay: 2.5s">
+    <p>&copy; Schneller</p>
+    <div class="social-icons">
+      <a href="https://www.discord.com" target="_blank" class="icon-link"><i class="fab fa-discord"></i></a>
+    </div>
+  </footer>
+
+  <!-- Add styles for the team section -->
+  <style>
+
+    .team-section {
+      padding: 4rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .team-member {
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .team-member-image img {
+      width: 25%;
+      height: auto;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .team-member h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #FFF;
+    }
+
+    .team-member p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #FFF;
+    }
+
+    .team-member-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .team-member-icons .icon-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.team-member-icons .icon-link:hover {
+  background-color: #ff5f5f;
+  color: #fff;
+}
+
+    .animate {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInZoom 2s forwards var(--delay, 0s);
+}
+
+@keyframes fadeInZoom {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+  </style>
+
+  <!-- Add to the existing script -->
+  <script>
+      navItems.forEach((navItems) => {
+  navItems.addEventListener("mouseenter", () => {
+    navItems.style.borderBottom = "2px solid #ffffff";
+  });
+
+  navItems.addEventListener("mouseleave", () => {
+    navItems.style.borderBottom = "none";
+  });
+});
+
+
+  </script>
+
+</body>
+
+</html>

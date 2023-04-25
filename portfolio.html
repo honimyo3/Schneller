@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="file:///C:/Users/valer/Downloads/download__2_-removebg-preview.png" type="image/x-icon">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #FFF;
+      background-color: #121212;
+    }
+    header {
+      background-color: #111;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none; /* Add this line to remove underline */
+}
+
+
+    .card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+    .card {
+      background-color: #222;
+      border-radius: 5px;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-media {
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .card-content {
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-description {
+      margin-bottom: 1rem;
+    }
+
+    .card-author {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #999;
+    }
+
+    footer {
+      background-color: #111;
+      padding: 1rem;
+      text-align: center;
+      color: #FFF;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+
+    .animate {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInZoom 2s forwards var(--delay, 0s);
+}
+
+@keyframes fadeInZoom {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+  </style>
+</head>
+<body>
+    <header class="animate" style="--delay: 0.5s">
+    <div class="brand">
+        <img src="file:///C:/Users/valer/Downloads/download__2_-removebg-preview.png" alt="Icon" class="brand-icon">
+        <h1>Schneller</h1>
+      </div>
+    <nav>
+      <a href="site.html">Home</a>
+      <a href="team.html">Team</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+  <main class="main animate" style="--delay: 1s">
+    <div class="card-grid">
+      <!-- Add more cards as needed -->
+      <div class="card">
+        <img class="card-media"/>
+        <div class="card-content">
+          <h2 class="card-title">Imgur</h2>
+          <p class="card-description">Just so I do not have to link everything I've made here, lighting or otherwise, here is my <a href="https://imgur.com/a/T8kJDIo">portfolio</a>, and here is my <a href="https://www.youtube.com/channel/UCJSRzrEAq9E-lYNtiLD3lRA">youtube</a>
+          <p class="card-author">Jaylen#0320</p>
+        </div>
+      </div>
+      <div class="card">
+        <video class="card-media" src="2023-04-18 18-14-50.mp4" controls></video>
+        <div class="card-content">
+          <h2 class="card-title">The Twister</h2>
+          <p class="card-description">This prototype took 8 hours long, it will never see the light of day outside of my studio dustbin, but I will remember it.</p>
+          <p class="card-author">by Jaylen#0320</p>
+        </div>
+      </div>
+      <div class="card">
+        <video class="card-media" src="distort.mp4" controls></video>
+        <div class="card-content">
+          <h2 class="card-title">Archelm</h2>
+          <p class="card-description">Once again, a dead prototype. I tested noir lighting, obra dinn esque shadows, and distortion in this.</p>
+          <p class="card-author">by Jaylen#0320</p>
+        </div>
+      </div>
+    </div>
+</main>
+<footer class="animate" style="--delay: 2.5s">
+  &copy; Schneller
+</footer>
+</body>
+</html>
+    
