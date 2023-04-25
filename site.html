@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Add this line in the head section -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Brand</title>
+  <link rel="icon" href="file:///C:/Users/valer/Downloads/download__2_-removebg-preview.png" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+    /* General styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #FFF;
+      background-color: #121212;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Layout and branding */
+    header {
+      background-color: #111;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* Hero section */
+    .hero {
+      position: relative;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('your-image-url') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+    }
+
+    /* Asymmetric wedge */
+    .hero::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background-image: linear-gradient(to top left, transparent 50%, #111 50%);
+      transform: scaleY(-1);
+    }
+
+    @media screen and (max-width: 768px) {
+      .hero::before {
+        height: 50px;
+      }
+    }
+
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      text-align: center;
+      line-height: 1.5;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Call-to-Action */
+    .cta {
+      background-color: #ff5f5f;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #ff3737;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Features */
+    .features {
+      padding: 4rem 1rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      max-width: 300px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .feature h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #FFF;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #FFF;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 4rem 1rem;
+      background-color: #1E1E1E;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      text-align: center;
+    }
+
+    .testimonial h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #FFF;
+    }
+
+    .testimonial p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #FFF;
+      line-height: 1.5;
+    }
+
+    .testimonial .author {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: #999;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: white;
+    }
+
+    /* Interactive elements */
+    .interactive-element {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .interactive-element:hover {
+      transform: scale(1.1);
+    }
+
+    /* More Features */
+    .more-features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+
+    .more-feature {
+      flex: 1;
+      padding: 1rem;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+      background-color: #2C2C2C;
+      border-radius: 0.5rem;
+    }
+
+    .more-feature h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #FFF;
+      font-weight: 600;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #2C2C2C;
+      border-radius: 0.5rem;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #FFF;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      background-color: #FFF;
+    }
+
+    .contact-form textarea {
+      min-height: 200px;
+      resize: none;
+    }
+
+    .contact-form button {
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #555;
+    }
+
+    /* Responsive design for more features and contact form */
+    @media screen and (max-width: 768px) {
+      .more-features {
+        flex-direction: column;
+      }
+
+      .more-feature {
+        margin-right: 0;
+      }
+    }
+
+    /* Social media icons */
+    .social-icons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .icon-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      color: #333;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .icon-link:hover {
+      background-color: #ff5f5f;
+      color: #ffffff;
+    }
+
+    .loader-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: hideLoader 0.5s forwards 4s;
+      /* Hiding animation after 4s */
+    }
+
+    /* Add this to your existing CSS */
+    .feature i {
+      margin-bottom: 1rem;
+      color: #FFF;
+    }
+
+
+    .wave {
+      width: 10px;
+      height: 50px;
+      background-color: #FFF;
+      display: inline-block;
+      animation: waveAnimation 1s infinite ease-in-out;
+    }
+
+    .wave:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .wave:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .wave:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    .wave:nth-child(5) {
+      animation-delay: 0.8s;
+    }
+
+    @keyframes waveAnimation {
+
+      0%,
+      40%,
+      100% {
+        transform: scaleY(0.4);
+      }
+
+      20% {
+        transform: scaleY(1);
+      }
+    }
+
+    @keyframes hideLoader {
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand-icon {
+      width: 32px;
+      /* Adjust the width of the icon */
+      height: 32px;
+      /* Adjust the height of the icon */
+      margin-right: 10px;
+      /* Add some space between the icon and the h1 text */
+    }
+
+    .hidden-text {
+      gap: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.show-text {
+  gap: 2;
+  opacity: 1;
+}
+
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const cta = document.querySelector(".cta");
+  const smoothText = document.getElementById("smooth-text");
+
+  cta.addEventListener("click", () => {
+    smoothText.classList.toggle("show-text");
+  });
+
+  // ... rest of your JavaScript code
+});
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const cta = document.querySelector(".cta");
+      const features = document.querySelectorAll(".feature");
+
+      features.forEach((feature, index) => {
+        feature.addEventListener("mouseenter", () => {
+          feature.style.transform = "scale(1.1)";
+          feature.style.transition = "transform 0.3s ease-in-out";
+        });
+
+        feature.addEventListener("mouseleave", () => {
+          feature.style.transform = "scale(1)";
+          feature.style.transition = "transform 0.3s ease-in-out";
+        });
+      });
+
+
+      const navItems = document.querySelectorAll("nav a");
+      navItems.forEach((navItem) => {
+        navItem.addEventListener("mouseenter", () => {
+          navItem.style.borderBottom = "2px solid #ffffff";
+        });
+
+        navItem.addEventListener("mouseleave", () => {
+          navItem.style.borderBottom = "none";
+        });
+      });
+
+
+
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.style.backgroundColor = "#333";
+          header.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+        } else {
+          header.style.backgroundColor = "transparent";
+          header.style.boxShadow = "none";
+        }
+      });
+    });
+
+    
+
+  </script>
+</head>
+
+<body>
+
+  <body>
+    <div class="loader-overlay">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <!-- Rest of your HTML code -->
+  </body>
+
+  <header>
+
+    <div class="brand">
+      <img src="file:///C:/Users/valer/Downloads/download__2_-removebg-preview.png" alt="Icon" class="brand-icon">
+      <h1>Schneller</h1>
+    </div>
+    <nav>
+
+      <a href="team.html">Team</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#">About</a>
+
+
+
+    </nav>
+  </header>
+  <section class="hero">
+    <h2>idk</h2>
+    <p>hmmm</p>
+    <button class="cta">Join The Team</button>
+    <p id="smooth-text" class="hidden-text">Contact Jaylen#0320</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" target="_blank" class="icon-link"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.twitter.com" target="_blank" class="icon-link"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com" target="_blank" class="icon-link"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.discord.com" target="_blank" class="icon-link"><i class="fab fa-discord"></i></a>
+    </div>
+
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <i class="fas fa-rocket fa-2x"></i>
+      <h3>Passion</h3>
+      <p>We enjoy development a ton, we simply need the right idea.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-shield-alt fa-2x"></i>
+      <h3>Experience</h3>
+      <p>There are years of experience between all of us, whether it be building, modelling, or scripting.</p>
+    </div>
+    <div class="feature">
+      <i class="fas fa-sync fa-2x"></i>
+      <h3>Consider joining!</h3>
+      <p>I'd be glad to have you in the community or as a fellow developer to help out with whatever we choose to do.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonial">
+      <h3>Tommy</h3>
+      <p>"I frfr think this community is the sanest group in Omaha."</p>
+      <p class="author">- Happy Amigo</p>
+    </div>
+    <div class="testimonial">
+      <h3>Thomas</h3>
+      <p>"I am so unknowably aroused."</p>
+      <p class="author">- Another Happy Amigo</p>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; Schneller</p>
+  </footer>
+
+</html>
