@@ -425,72 +425,36 @@ nav a:hover {
   opacity: 1;
 }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -250px;
-  height: 100%;
-  width: 250px;
-  background-color: #121212;
+.brand, nav a {
+  background-color: #111;
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  z-index: 100;
+  border-radius: 0.5rem;
 }
 
-.sidebar.show {
-  right: 0;
+nav a:hover {
+  background-color: #ff5f5f;
+  color: white;
 }
 
-.open-sidebar {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
+.hero {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta {
   font-size: 1.5rem;
-  background-color: transparent;
-  border: none;
-  color: #FFF;
-  cursor: pointer;
-  z-index: 99;
+  color: white;
 }
 
-.close-sidebar {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  font-size: 1.5rem;
-  background-color: transparent;
-  border: none;
-  color: #FFF;
-  cursor: pointer;
+.cta:hover {
+  background-color: #ff3737;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.sidebar h2 {
-  color: #FFF;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.contact-form input,
+.contact-form textarea {
+  border-radius: 0;
 }
 
-.sidebar-section {
-  margin-bottom: 1rem;
-}
-
-.sidebar h3 {
-  color: #FFF;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.theme-toggle label {
-  color: #FFF;
-  font-size: 1rem;
-  margin-right: 1rem;
-}
-
-input[type="radio"] {
-  margin-right: 0.5rem;
-}
 
   </style>
   <script>
@@ -503,31 +467,6 @@ input[type="radio"] {
   });
 
   // ... rest of your JavaScript code
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const openSidebar = document.getElementById("open-sidebar");
-  const closeSidebar = document.getElementById("close-sidebar");
-  const sidebar = document.getElementById("sidebar");
-  const themeToggle = document.querySelector(".theme-toggle");
-
-  openSidebar.addEventListener("click", () => {
-    sidebar.classList.add("show");
-  });
-
-  closeSidebar.addEventListener("click", () => {
-    sidebar.classList.remove("show");
-  });
-
-  themeToggle.addEventListener("change", (event) => {
-    const theme = event.target.value;
-    if (theme === "dark") {
-      document.body.style.backgroundColor = "#121212";
-      document.body.style.color = "#FFF";
-    } else {
-      document.body.style.backgroundColor = "#FFF";
-      document.body.style.color = "#121212";
-    }
-  });
 });
 
     document.addEventListener("DOMContentLoaded", () => {
@@ -635,7 +574,7 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   <section class="hero">
     <h2>Schneller</h2>
     <p>ROBLOX Surrealism</p>
-    <button class="cta">Join Us</button>
+    <button class="cta"><i class="fas fa-envelope"></i> Join Us </button>
     <p id="smooth-text" class="hidden-text">Contact Jaylen#0320</p>
     <div class="social-icons">
       <a href="https://www.facebook.com" target="_blank" class="icon-link"><i class="fab fa-facebook-f"></i></a>
