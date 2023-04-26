@@ -425,36 +425,6 @@ nav a:hover {
   opacity: 1;
 }
 
-.brand, nav a {
-  background-color: #111;
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-
-nav a:hover {
-  background-color: #ff5f5f;
-  color: white;
-}
-
-.hero {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.cta {
-  font-size: 1.5rem;
-  color: white;
-}
-
-.cta:hover {
-  background-color: #ff3737;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.contact-form input,
-.contact-form textarea {
-  border-radius: 0;
-}
-
 
   </style>
   <script>
@@ -524,25 +494,6 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 
   </script>
 </head>
-
-<body>
-  <div id="sidebar" class="sidebar hidden">
-    <h2>Settings</h2>
-    <hr>
-    <div class="sidebar-section">
-      <h3>Theme</h3>
-      <div class="theme-toggle">
-        <label>
-          <input type="radio" name="theme" value="light" checked> Light
-        </label>
-        <label>
-          <input type="radio" name="theme" value="dark"> Dark
-        </label>
-      </div>
-    </div>
-    <button id="close-sidebar" class="close-sidebar">&times;</button>
-  </div>
-  <button id="open-sidebar" class="open-sidebar">&#9776;</button>
   
   <body>
     <div class="loader-overlay">
