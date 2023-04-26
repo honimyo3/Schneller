@@ -12,7 +12,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-
+    
     /* General styles */
     body {
       font-family: 'Poppins', sans-serif;
@@ -404,8 +404,57 @@
   opacity: 1;
 }
 
+nav a:hover {
+  border-bottom: 2px solid #ff5f5f;
+}
+
+/* Smooth scrolling effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add this CSS code to your existing styles */
+nav a:hover {
+  color: #ff5f5f;
+}
+
+.hero:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to top left, transparent 50%, #111 50%);
+  transform: scaleY(1);
+}
+
+@media screen and (max-width: 768px) {
+  .hero::after {
+    height: 50px;
+  }
+}
+
   </style>
   <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+  const featureIcons = document.querySelectorAll(".feature i");
+  const ctaButton = document.querySelector(".cta");
+  
+  ctaButton.addEventListener("mouseover", () => {
+    featureIcons.forEach(icon => {
+      icon.style.color = "#ff5f5f";
+    });
+  });
+
+  ctaButton.addEventListener("mouseout", () => {
+    featureIcons.forEach(icon => {
+      icon.style.color = "#FFF";
+    });
+  });
+});
+
     document.addEventListener("DOMContentLoaded", () => {
   const cta = document.querySelector(".cta");
   const smoothText = document.getElementById("smooth-text");
@@ -459,7 +508,17 @@
       });
     });
 
-    
+
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (event) => {
+    event.preventDefault();
+    document.querySelector(anchor.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
 
   </script>
 </head>
